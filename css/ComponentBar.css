@@ -1,0 +1,39 @@
+/* 柱状图组件基本样式 */
+.component_bar{
+	position: absolute;
+}
+.component_bar .line{
+	height:15px;
+	font-size: 12px;
+	line-height: 15px;
+	margin-bottom: 15px;
+}
+
+.component_bar .name{
+	width: 60px;
+	color: #000;
+	text-align: center;
+	position: absolute;
+	left: -60px;
+}
+.component_bar .rate{
+	height: 15px;
+	margin-left: 5px;
+	float: left;
+	position: relative;
+}
+.component_bar .rate .bg{
+	background-color: #99c0ff;
+	width:100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.component_bar .per{
+	width: 20px;
+	color: #99c0ff;
+	position: absolute;
+	right: -30px;
+}

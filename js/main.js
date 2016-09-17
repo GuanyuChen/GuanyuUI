@@ -42,7 +42,7 @@ var Main = function() {
 	}
 
 
-	// main对象初始化呈现
+	// main对象初始化加载
 	this.loader = function() {
 		this.element.fullpage({
 			onLeave: function(index, nextIndex, direction) { // 页面离开

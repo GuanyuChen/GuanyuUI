@@ -56,3 +56,21 @@
 1. component 代表所有组件
 2. component_base 代表某种类型的组件 还有component_pie...用于某种样式的附加；还包括他们的状态_Load、_ Leave
 3. component_name_myName 自定义组件名 用于附加样式 比如通用的标题之类的
+
+### 图表组件
+
+图表组件数据 (本身是一个数组，数组里面每一项都是数组)
+
+```
+var data = [];
+data.push(['A项',.5,'#f00']);
+        项目名称 项目数值(取值约定) 颜色
+```
+
+1. 散点图
+2. 水平柱图、垂直柱图
+    * 柱图结构：name process per
+    * 我们应当注意一点：process一部分的width应该可以占据组件width的100%；所以，应当把name和per设置为`position:absolute;`，并且距离左右两边分别为本身宽度的负数
+3. 折线图
+4. 雷达图
+5. 饼图、环图
