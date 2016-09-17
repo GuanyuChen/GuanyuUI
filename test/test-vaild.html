@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 	<title>Document</title>
 	<style type="text/css">
 		body{margin:0;padding:0;}
@@ -21,10 +22,10 @@
 			$('#main').fullpage({ // 为父元素调用fullpage方法，为每个页面添加类名section
 				'sectionsColor':['red','blue','yellow','black'], // 配置参数，为每个页面添加背景颜色
 				onLeave:function(index,nextIndex,direction){ // 页面离开
-					$('#main').find('.page').eq(index-1).trigger('onLeave');
+					$('#main').find('.page').eq(index-1).trigger('onLeave'); // 页面离开调用事件
 				},
 				afterLoad:function(anchorLink,index){ // 页面载入完毕 anchorLink 锚点名称
-					$('#main').find('.page').eq(index-1).trigger('onLoad');
+					$('#main').find('.page').eq(index-1).trigger('onLoad'); // 页面载入调用事件
 				}
 			});
 

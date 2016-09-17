@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>基本图文组件的验证</title>
+	<style type="text/css">
+		body{
+			margin: 0;
+			padding: 0;
+			background-color: #000;
+			font-size: 12px;
+		}
+
+		.iphone{
+			width: 320px;
+			height: 540px;
+			background-color: #fff;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			margin: -270px 0 0 -160px;
+		}
+
+		.component_base{
+			transition: all 1s; /*动画效果*/
+		}
+	</style>
+	<link rel="stylesheet" type="text/css" href="../css/ComponentBase.css">
+	<script type="text/javascript" src="../js/lib/jquery-3.1.0.min.js"></script>
+	<script type="text/javascript" src="../js/ComponentBase.js"></script>
+</head>
+<body>
+	<div class="iphone"></div>
+	<script type="text/javascript">
+		var cfg = { // 给定一个基本图文组件的参数
+			type:'base',
+			width:514,
+			height:306,
+			bg:'../imgs/test.jpg',
+			css:{
+				left:50,
+				top:0,
+				opacity:0
+			},
+			animateIn:{ // 页面载入时的样式	
+				top:180,
+				opacity:1
+			},
+			animateOut:{ // 页面离开时的样式
+				top:0,
+				opacity:0
+			},
+			center:true
+		};
+
+		var cfg2 = {
+			type:'base',
+			width:200,
+			height:100,
+			bgc:'pink',
+			css:{
+				left:50,
+				top:0,
+				opacity:0
+			},
+			animateIn:{ // 载入时的状态
+				top:150,
+				opacity:1
+			},
+			animateOut:{ // 淡出时的状态
+				top:0,
+				opacity:0
+			},
+			relativeTo:'myname',
+			center:true
+		}
+
+		var com = new ComponentBase('myname',cfg); // 将参数传入构造方法中，返回一个组件
+		var ce = new ComponentBase('haha',cfg2);
+		$('.iphone').append(com); // 将组件绑定到page上
+		$('.iphone').append(ce);
+
+		var Leave = true;
+		$('body').click(function(){
+			Leave = !Leave;
+			$('.component').trigger(Leave?'onLeave':'onLoad');
+		});
+	</script>
+</body>
+</html>
