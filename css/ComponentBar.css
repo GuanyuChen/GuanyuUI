@@ -24,11 +24,12 @@
 }
 .component_bar .rate .bg{
 	background-color: #99c0ff;
-	width:100%;
+	width:0%;
 	height: 100%;
 	position: absolute;
 	left: 0;
 	top: 0;
+	border-radius: 3px;
 }
 
 .component_bar .per{
@@ -36,4 +37,21 @@
 	color: #99c0ff;
 	position: absolute;
 	right: -30px;
+	-webkit-opacity: 0;
+}
+
+.component_bar_load .rate .bg{
+	-webkit-transition: all 1s .5s;
+	width: 100%;
+}
+.component_bar_leave .rate .bg{
+	width: 0%;
+}
+
+.component_bar_load .per{
+	-webkit-transition: all 1s 1s; /* 第三个参数为延迟1s 等待.bg动画结束 */
+	-webkit-opacity: 1;
+}
+.component_bar_leave .per{
+	-webkit-opacity: 0;
 }

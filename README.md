@@ -71,6 +71,10 @@ data.push(['A项',.5,'#f00']);
 2. 水平柱图、垂直柱图
     * 柱图结构：name process per
     * 我们应当注意一点：process一部分的width应该可以占据组件width的100%；所以，应当把name和per设置为`position:absolute;`，并且距离左右两边分别为本身宽度的负数
-3. 折线图
+3. 折线图(Canvas)
+    1. Canvas划线、填充、简单画圆
+    2. 网格绘制/项目文本
+    3. 通用Canvas动画(数据生长)
+    4. 填充阴影
 4. 雷达图
 5. 饼图、环图

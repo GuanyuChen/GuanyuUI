@@ -5,7 +5,7 @@ var ComponentBar = function(name, config) {
 	var component = new ComponentBase(name, config);
 
 	$.each(config.data, function(index, item) {
-		console.log(item);
+		// console.log(item);
 
 		var line = $('<div class="line">'); // 一个完整的柱 会分成三部分
 		var name = $('<div class="name">'); // 柱的名字部分

@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>柱状图测试</title>
+	<title>折线图测试</title>
 	<link rel="stylesheet" type="text/css" href="../css/ComponentBase.css">
-	<link rel="stylesheet" type="text/css" href="../css/ComponentBar.css">
+	<link rel="stylesheet" type="text/css" href="../css/ComponentPolyLine.css">
 	<style type="text/css">
 		body{
 			margin: 0;
@@ -29,27 +29,27 @@
 	</style>
 	<script type="text/javascript" src="../js/lib/jquery-3.1.0.min.js"></script>
 	<script type="text/javascript" src="../js/ComponentBase.js"></script>
-	<script type="text/javascript" src="../js/ComponentBar.js"></script>
+	<script type="text/javascript" src="../js/ComponentPolyLine.js"></script>
 </head>
 <body>
 	<div class="iphone"></div>
 	<script type="text/javascript">
 	var cfg = { // 给定一个基本图文组件的参数
-			type:'bar',
-			width:330,
-			height:600,
+			type:'polyline',
+			width:530,
+			height:400,
 			data:[
 				['JavaScript',.4,'#ff7676'],
 				['HTML/CSS',.2],
 				['HTML5',.1],
-				['css3',.2],
+				['CSS3',.2],
 				['jQuery',.35],
 				['Bootstrap',.05],
 				['Angular',.09]
 			],
 			css:{
 				top:100,
-				opacity:0
+				//opacity:0
 			},
 			animateIn:{ // 页面载入时的样式	
 				top:200,
@@ -62,8 +62,8 @@
 			center:true
 		};
 
-		var bar = new ComponentBar('bar',cfg);
-		$('.iphone').append(bar);
+		var polyline = new ComponentPolyLine('polyline',cfg);
+		$('.iphone').append(polyline);
 
 		var Leave = true;
 		$('body').click(function(){
